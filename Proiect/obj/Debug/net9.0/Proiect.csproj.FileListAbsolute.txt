@@ -1,0 +1,15 @@
+C:\Users\lupau\RiderProjects\ConsoleApp1\Proiect\bin\Debug\net9.0\p_s.xml
+C:\Users\lupau\RiderProjects\ConsoleApp1\Proiect\bin\Debug\net9.0\Proiect.exe
+C:\Users\lupau\RiderProjects\ConsoleApp1\Proiect\bin\Debug\net9.0\Proiect.deps.json
+C:\Users\lupau\RiderProjects\ConsoleApp1\Proiect\bin\Debug\net9.0\Proiect.runtimeconfig.json
+C:\Users\lupau\RiderProjects\ConsoleApp1\Proiect\bin\Debug\net9.0\Proiect.dll
+C:\Users\lupau\RiderProjects\ConsoleApp1\Proiect\bin\Debug\net9.0\Proiect.pdb
+C:\Users\lupau\RiderProjects\ConsoleApp1\Proiect\obj\Debug\net9.0\Proiect.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lupau\RiderProjects\ConsoleApp1\Proiect\obj\Debug\net9.0\Proiect.AssemblyInfoInputs.cache
+C:\Users\lupau\RiderProjects\ConsoleApp1\Proiect\obj\Debug\net9.0\Proiect.AssemblyInfo.cs
+C:\Users\lupau\RiderProjects\ConsoleApp1\Proiect\obj\Debug\net9.0\Proiect.csproj.CoreCompileInputs.cache
+C:\Users\lupau\RiderProjects\ConsoleApp1\Proiect\obj\Debug\net9.0\Proiect.dll
+C:\Users\lupau\RiderProjects\ConsoleApp1\Proiect\obj\Debug\net9.0\refint\Proiect.dll
+C:\Users\lupau\RiderProjects\ConsoleApp1\Proiect\obj\Debug\net9.0\Proiect.pdb
+C:\Users\lupau\RiderProjects\ConsoleApp1\Proiect\obj\Debug\net9.0\Proiect.genruntimeconfig.cache
+C:\Users\lupau\RiderProjects\ConsoleApp1\Proiect\obj\Debug\net9.0\ref\Proiect.dll

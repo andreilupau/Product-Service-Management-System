@@ -1,0 +1,15 @@
+C:\Users\lupau\RiderProjects\ConsoleApp1\Lab2-3-4\bin\Debug\net9.0\Lab2-3-4.exe
+C:\Users\lupau\RiderProjects\ConsoleApp1\Lab2-3-4\bin\Debug\net9.0\Lab2-3-4.deps.json
+C:\Users\lupau\RiderProjects\ConsoleApp1\Lab2-3-4\bin\Debug\net9.0\Lab2-3-4.runtimeconfig.json
+C:\Users\lupau\RiderProjects\ConsoleApp1\Lab2-3-4\bin\Debug\net9.0\Lab2-3-4.dll
+C:\Users\lupau\RiderProjects\ConsoleApp1\Lab2-3-4\bin\Debug\net9.0\Lab2-3-4.pdb
+C:\Users\lupau\RiderProjects\ConsoleApp1\Lab2-3-4\obj\Debug\net9.0\Lab2-3-4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lupau\RiderProjects\ConsoleApp1\Lab2-3-4\obj\Debug\net9.0\Lab2-3-4.AssemblyInfoInputs.cache
+C:\Users\lupau\RiderProjects\ConsoleApp1\Lab2-3-4\obj\Debug\net9.0\Lab2-3-4.AssemblyInfo.cs
+C:\Users\lupau\RiderProjects\ConsoleApp1\Lab2-3-4\obj\Debug\net9.0\Lab2-3-4.csproj.CoreCompileInputs.cache
+C:\Users\lupau\RiderProjects\ConsoleApp1\Lab2-3-4\obj\Debug\net9.0\Lab2-3-4.dll
+C:\Users\lupau\RiderProjects\ConsoleApp1\Lab2-3-4\obj\Debug\net9.0\refint\Lab2-3-4.dll
+C:\Users\lupau\RiderProjects\ConsoleApp1\Lab2-3-4\obj\Debug\net9.0\Lab2-3-4.pdb
+C:\Users\lupau\RiderProjects\ConsoleApp1\Lab2-3-4\obj\Debug\net9.0\Lab2-3-4.genruntimeconfig.cache
+C:\Users\lupau\RiderProjects\ConsoleApp1\Lab2-3-4\obj\Debug\net9.0\ref\Lab2-3-4.dll
+C:\Users\lupau\RiderProjects\ConsoleApp1\Lab2-3-4\bin\Debug\net9.0\p_s.xml
