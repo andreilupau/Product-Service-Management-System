@@ -1,38 +1,30 @@
-# 🛠️ Aplicatie C# - Gestionare Produse, Servicii și Pachete
+# 📦 Product & Service Management Console App
 
-Acest proiect este o aplicație de tip consolă scrisă în C#, care permite gestionarea unei colecții de produse, servicii și pachete combinate. Include funcționalități de introducere a datelor, interogări LINQ, sortare și filtrare extensibilă pe baza interfețelor.
+## 🧾 About
 
-## ✅ Funcționalități principale
+This is a C# console application for managing products, services, and bundled packages.  
+It supports flexible data input (console or XML), LINQ-based queries, sorting by price, and a modular filtering system built using interfaces.  
+The project was developed as part of a university assignment to explore OOP concepts, inheritance, and extensibility in .NET.
 
-- 📥 **Introducerea datelor**:
-  - Din consolă
-  - Din fișier XML (`p_s.xml`)
+---
 
-- 📦 **Gestionarea elementelor**:
-  - Produse și servicii adăugate într-un manager comun
-  - Posibilitatea de a crea pachete care conțin mai multe produse/servicii
+## 🚀 Features
 
-- 🔍 **Interogări LINQ**:
-  - Afișare produse dintr-o categorie
-  - Afișare servicii sub un anumit preț
-  - Grupare elemente după categorie
+- Add and display products and services
+- Group items into custom packages
+- Read data from the console or from XML files
+- Perform LINQ queries (by category, by price, grouping)
+- Filter packages using customizable filter criteria via interfaces
+- Easily extend the app with new filter types
 
-- 🔃 **Sortare pachete**:
-  - Pachetele sunt sortate în funcție de preț
+---
 
-- 🧰 **Filtrare extensibilă**:
-  - Filtrare după categorie
-  - Filtrare după preț maxim
-  - Sistem extensibil cu interfețe (`ICriteriu`, `IFiltrare`)
+## 🧩 Technologies Used
 
-## 🧱 Arhitectură
+- C#
+- .NET Console Application
+- LINQ
+- XML Serialization/Deserialization
+- Interface-based design
 
-- `ProduseManager`, `ServiciiManager` – manageri pentru citirea și stocarea produselor/serviciilor
-- `Pachet` – clasa care conține mai multe produse/servicii
-- `ProdusAbstract` – clasă de bază pentru `Produs` și `Serviciu`
-- `ICriteriu<T>` – interfață pentru definirea criteriilor de filtrare
-- `IFiltrare<T>` – interfață pentru clasele care aplică filtrarea
-- `FiltrareCriteriu<T>` – implementare generică a filtrării pe baza unui criteriu
-
-## 📂 Structura proiectului
-
+---
