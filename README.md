@@ -30,9 +30,9 @@ The project was developed as part of a university assignment to explore OOP conc
 ---
 
 
-## Screenshots
+## 🖼️ Screenshots
 
-<img src="https://github.com/user-attachments/assets/c6469dd6-4f6f-43f5-8b2a-9dfd5a15cc78" style="width: 40%;">  
+<img src="https://github.com/user-attachments/assets/c6469dd6-4f6f-43f5-8b2a-9dfd5a15cc78" style="width: 20%;">  
 <img src="https://github.com/user-attachments/assets/5a23efbc-dcf6-4cdc-985d-48de6e9d5a2e" style="width: 40%;">  
 <img src="https://github.com/user-attachments/assets/c8e45cca-2158-48f4-aaa5-db081a70cc7c" style="width: 40%;">  
 
