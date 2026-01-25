@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Items>
+    <Produs>
+        <Id>1</Id>
+        <Nume>Laptop</Nume>
+        <CodIntern>LP123_XML</CodIntern>
+        <Producator>Lenovo</Producator>
+        <Pret>3500</Pret>
+        <Categorie>Electronice</Categorie>
+    </Produs>
+    <Serviciu>
+        <Id>2</Id>
+        <Nume>Consultanta IT</Nume>
+        <CodIntern>CIT321_XML</CodIntern>
+        <Pret>500</Pret>
+        <Categorie>Suport</Categorie>
+    </Serviciu>
+    
+</Items>
