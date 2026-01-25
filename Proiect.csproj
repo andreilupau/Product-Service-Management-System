@@ -9,9 +9,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-  <None Update="p_s.xml">
-    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-  </None>
-</ItemGroup>
+      <None Update="Data\p_s.xml">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
 
 </Project>

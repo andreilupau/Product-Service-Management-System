@@ -4,6 +4,9 @@ class Program
 {
     public static void Main(string[] args)
     {
+        //Mesaj introducere program
+        Console.WriteLine("Bun venit in programul de gestiune a serviciilor si produselor!");
+        
         //cream o instanta a fiecarui manager, pt. a putea accesa metodele
         ProduseManager pm = new ProduseManager();
         ServiciiManager sm = new ServiciiManager();
@@ -12,7 +15,7 @@ class Program
         while (true)
         {
             //alegerea optiunii (1. consola, 2. fisier xml)
-            Console.Write("Alege metoda de introducere: 1.Consolă 2.Fişier XML 0.Iesire\nAlegeti: ");
+            Console.Write("Intai alege metoda de introducere a produselor si serviciilor:\n   1.Consolă (introducere manuala)\n   2.Fişier XML (deja existente)\n   0.Inchide programul\nAlegeti: ");
             string? optiune = Console.ReadLine(); 
             
             if (optiune == "1")
@@ -125,6 +128,7 @@ class Program
                 Console.WriteLine("\n----- Filtrare pachete -----");
                 Console.WriteLine("1. Filtrare dupa categorie");
                 Console.WriteLine("2. Filtrare după pret maxim");
+                Console.WriteLine("0. Iesire din filtrare");
                 Console.Write("Alege optiunea de filtrare: ");
                 string? optFiltrare = Console.ReadLine();
 
@@ -149,6 +153,8 @@ class Program
                             Console.WriteLine("Pret invalid.");
                         }
                         break;
+                    case "0":
+                        break;
 
                     default:
                         Console.WriteLine("Optiune invalida.");
@@ -167,8 +173,9 @@ class Program
                     }
                 }
 
-        
-
+                
+        //Mesaj de incheiere
+        Console.WriteLine("\nProgramul a ajuns la sfarsit.");
 
     }
 }
