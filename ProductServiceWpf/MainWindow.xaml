@@ -1,0 +1,33 @@
+﻿<Window x:Class="ProductServiceWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProductServiceWpf"
+        mc:Ignorable="d"
+        Title="Product/Service Management (WPF)" Height="550" Width="950">
+
+    <Grid Margin="12">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="12"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="0">
+            <Button Width="150" Margin="0,0,8,0" Click="LoadSample_Click">Load sample</Button>
+            <Button Width="150" Margin="0,0,8,0" Click="LoadFromXml_Click">Load from XML</Button>
+            <Button Width="150" Margin="0,0,8,0" Click="Clear_Click">Clear</Button>
+        </StackPanel>
+
+        <DataGrid Grid.Row="2"
+                  AutoGenerateColumns="True"
+                  ItemsSource="{Binding Items}"
+                  IsReadOnly="True"/>
+
+        <TextBlock Grid.Row="3"
+                   Margin="0,12,0,0"
+                   Text="{Binding Status}"/>
+    </Grid>
+</Window>

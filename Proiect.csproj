@@ -1,17 +1,36 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-    <PropertyGroup>
-        <OutputType>Exe</OutputType>
-        <TargetFramework>net9.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
-        <RootNamespace>Lab2-3</RootNamespace>
-    </PropertyGroup>
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Lab2-3</RootNamespace>
+  </PropertyGroup>
 
-    <ItemGroup>
-      <None Update="Data\p_s.xml">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
-    </ItemGroup>
+  <!-- Proiect (Console) uses Core -->
+  <ItemGroup>
+    <ProjectReference Include=".\ProductService.Core\ProductService.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="ProductServiceWpf\**\*.cs" />
+    <EmbeddedResource Remove="ProductServiceWpf\**\*" />
+    <None Remove="ProductServiceWpf\**\*" />
+    <Page Remove="ProductServiceWpf\**\*" />
+  </ItemGroup>
+
+  <!-- IMPORTANT: Console project must not compile Core project sources -->
+  <ItemGroup>
+    <Compile Remove="ProductService.Core\**\*.cs" />
+    <EmbeddedResource Remove="ProductService.Core\**\*" />
+    <None Remove="ProductService.Core\**\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Data\p_s.xml" Link="Data\p_s.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 
 </Project>

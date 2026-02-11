@@ -26,8 +26,8 @@ class Program
             }
             else if (optiune == "2")
             {
-                pm.CitesteProduseDinXml("p_s.xml");
-                sm.CitesteServiciiDinXml("p_s.xml");
+                pm.CitesteProduseDinXml("Data/p_s.xml");
+                sm.CitesteServiciiDinXml("Data/p_s.xml");
                 break;
             }
             else if (optiune == "0")
