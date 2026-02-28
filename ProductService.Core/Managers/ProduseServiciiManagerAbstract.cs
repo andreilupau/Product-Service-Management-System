@@ -2,7 +2,7 @@ namespace Lab2;
 //baza pentru [ProduseManager], [ServiciiManager] si [PachetManager]
 public abstract class ProduseServiciiManagerAbstract
 {
-    //Boss-ul, array complet! intra toate: produs, serviciu, pachet. Fiecare pe un rand.
+    //Array strict pentru produse si servicii
     protected static List<ProdusServiciuAbstract> Array100 = new List<ProdusServiciuAbstract>();
     
     
@@ -37,7 +37,7 @@ public abstract class ProduseServiciiManagerAbstract
     
     public void Write2Console() //afisam tot ce avem in Array100
      {
-        Console.WriteLine("\nLista cu produse/servicii:");
+        Console.WriteLine("\nLista cu produse/servicii din Array100:");
         if (Array100.Count == 0)
         {
             Console.WriteLine("Array-ul este gol!");

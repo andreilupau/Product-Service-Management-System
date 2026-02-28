@@ -1,7 +1,8 @@
 namespace Lab2;
 
-public class Pachet : ProdusServiciuAbstract, IComparable<Pachet>//ex4L6 si codul de jos compareto
+public class Pachet : ProdusServiciuAbstract, IComparable<Pachet>//ex4L6 si codul de jos compareto 
 {
+    //TODO: Poti sterge mostenirea cu ProdusServiciuAbstract? dar in clasa PachetManager.cs?
     public Pachet(uint id, string nume, string codIntern, uint pret, string? categorie)
         : base(id, nume, codIntern, pret, categorie)
     {
@@ -12,7 +13,7 @@ public class Pachet : ProdusServiciuAbstract, IComparable<Pachet>//ex4L6 si codu
     private List<IPackageable> elem_pachet = new List<IPackageable>();
 
 
-    
+    //se refera la produse si servicii ca adauga
     public void AdaugaLaPachet(IPackageable item) //Într-un pachet să putem avea maxim un produs și un număr nelimitat de servic
     {
         if (CanAddElement(item))
