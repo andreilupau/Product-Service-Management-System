@@ -52,6 +52,11 @@ public abstract class ProduseServiciiManagerAbstract
     {
         return Array100;
     }
+
+    public static bool RemoveElement(ProdusServiciuAbstract obiect)
+    {
+        return Array100.Remove(obiect);
+    }
     
     
     

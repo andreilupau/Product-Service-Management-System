@@ -5,28 +5,147 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProductServiceWpf"
         mc:Ignorable="d"
-        Title="Product/Service Management (WPF)" Height="550" Width="950">
+        Title="{Binding UiTitle}" Height="650" Width="1100">
 
     <Grid Margin="12">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="12"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Orientation="Horizontal" Grid.Row="0">
-            <Button Width="150" Margin="0,0,8,0" Click="LoadSample_Click">Load sample</Button>
-            <Button Width="150" Margin="0,0,8,0" Click="LoadFromXml_Click">Load from XML</Button>
-            <Button Width="150" Margin="0,0,8,0" Click="Clear_Click">Clear</Button>
-        </StackPanel>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="1" Width="80" Command="{Binding ToggleLanguageCommand}" Content="{Binding UiLanguageButton}"/>
+        </Grid>
 
-        <DataGrid Grid.Row="2"
-                  AutoGenerateColumns="True"
-                  ItemsSource="{Binding Items}"
-                  IsReadOnly="True"/>
+        <TabControl Grid.Row="1">
+            <TabItem Header="{Binding UiTabProductsServices}">
+                <Grid Margin="8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="360"/>
+                        <ColumnDefinition Width="12"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
 
-        <TextBlock Grid.Row="3"
+                    <ScrollViewer Grid.Column="0"
+                                  VerticalScrollBarVisibility="Auto"
+                                  HorizontalScrollBarVisibility="Disabled">
+                        <StackPanel>
+                            <TextBlock FontWeight="Bold" Text="{Binding UiActions}"/>
+                            <StackPanel Orientation="Horizontal" Margin="0,6,0,12">
+                                <Button Width="140" Margin="0,0,8,0" Command="{Binding LoadFromXmlCommand}" Content="{Binding UiLoadXml}"/>
+                                <Button Width="140" Command="{Binding ClearCommand}" Content="{Binding UiClear}"/>
+                            </StackPanel>
+
+                            <TextBlock FontWeight="Bold" Text="{Binding UiProduct}"/>
+                            <TextBlock Margin="0,6,0,0" Text="{Binding UiName}"/>
+                            <TextBox Text="{Binding ProdusNume, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}"/>
+                            <TextBlock Margin="0,6,0,0" Text="{Binding UiInternalCode}"/>
+                            <TextBox Text="{Binding ProdusCod, UpdateSourceTrigger=PropertyChanged}"/>
+                            <TextBlock Margin="0,6,0,0" Text="{Binding UiProducer}"/>
+                            <TextBox Text="{Binding ProdusProducator, UpdateSourceTrigger=PropertyChanged}"/>
+                            <TextBlock Margin="0,6,0,0" Text="{Binding UiPrice}"/>
+                            <TextBox Text="{Binding ProdusPret, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}"/>
+                            <TextBlock Margin="0,6,0,0" Text="{Binding UiCategory}"/>
+                            <TextBox Text="{Binding ProdusCategorie, UpdateSourceTrigger=PropertyChanged}"/>
+                            <Button Margin="0,10,0,16" Command="{Binding AddProdusCommand}" Content="{Binding UiAddProduct}"/>
+
+                            <Separator Margin="0,6,0,6"/>
+
+                            <TextBlock FontWeight="Bold" Text="{Binding UiService}"/>
+                            <TextBlock Margin="0,6,0,0" Text="{Binding UiName}"/>
+                            <TextBox Text="{Binding ServiciuNume, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}"/>
+                            <TextBlock Margin="0,6,0,0" Text="{Binding UiInternalCode}"/>
+                            <TextBox Text="{Binding ServiciuCod, UpdateSourceTrigger=PropertyChanged}"/>
+                            <TextBlock Margin="0,6,0,0" Text="{Binding UiPrice}"/>
+                            <TextBox Text="{Binding ServiciuPret, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}"/>
+                            <TextBlock Margin="0,6,0,0" Text="{Binding UiCategory}"/>
+                            <TextBox Text="{Binding ServiciuCategorie, UpdateSourceTrigger=PropertyChanged}"/>
+                            <Button Margin="0,10,0,0" Command="{Binding AddServiciuCommand}" Content="{Binding UiAddService}"/>
+                        </StackPanel>
+                    </ScrollViewer>
+
+                    <Grid Grid.Column="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,8">
+                            <Button Width="160" Command="{Binding DeleteItemCommand}" Content="{Binding UiDeleteItem}"/>
+                        </StackPanel>
+
+                        <DataGrid Grid.Row="1"
+                                  AutoGenerateColumns="True"
+                                  ItemsSource="{Binding Items}"
+                                  SelectedItem="{Binding SelectedItem}"
+                                  IsReadOnly="False"/>
+                    </Grid>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="{Binding UiTabPackages}">
+                <Grid Margin="8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="360"/>
+                        <ColumnDefinition Width="12"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="12"/>
+                        <ColumnDefinition Width="300"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="0">
+                        <TextBlock FontWeight="Bold" Text="{Binding UiPackage}"/>
+                        <TextBlock Margin="0,6,0,0" Text="{Binding UiName}"/>
+                        <TextBox Text="{Binding PachetNume, UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBlock Margin="0,6,0,0" Text="{Binding UiInternalCode}"/>
+                        <TextBox Text="{Binding PachetCod, UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBlock Margin="0,6,0,0" Text="{Binding UiCategory}"/>
+                        <TextBox Text="{Binding PachetCategorie, UpdateSourceTrigger=PropertyChanged}"/>
+                        <Button Margin="0,10,0,16" Command="{Binding CreatePachetCommand}" Content="{Binding UiCreatePackage}"/>
+
+                        <Separator Margin="0,6,0,6"/>
+
+                        <TextBlock FontWeight="Bold" Text="{Binding UiAddContent}"/>
+                        <TextBlock Margin="0,6,0,0" Text="{Binding UiProduct}"/>
+                        <ComboBox ItemsSource="{Binding Produse}" DisplayMemberPath="Nume" SelectedItem="{Binding SelectedProdus}"/>
+                        <Button Margin="0,6,0,10" Command="{Binding AddProdusToPachetCommand}" Content="{Binding UiAddProductToPackage}"/>
+
+                        <TextBlock Margin="0,6,0,0" Text="{Binding UiService}"/>
+                        <ComboBox ItemsSource="{Binding Servicii}" DisplayMemberPath="Nume" SelectedItem="{Binding SelectedServiciu}"/>
+                        <Button Margin="0,6,0,0" Command="{Binding AddServiciuToPachetCommand}" Content="{Binding UiAddServiceToPackage}"/>
+                    </StackPanel>
+
+                    <Grid Grid.Column="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,8">
+                            <Button Width="160" Command="{Binding DeletePachetCommand}" Content="{Binding UiDeletePackage}"/>
+                        </StackPanel>
+
+                        <DataGrid Grid.Row="1"
+                                  AutoGenerateColumns="True"
+                                  ItemsSource="{Binding Pachete}"
+                                  SelectedItem="{Binding SelectedPachet}"
+                                  IsReadOnly="False"/>
+                    </Grid>
+
+                    <StackPanel Grid.Column="4">
+                        <TextBlock FontWeight="Bold" Text="{Binding UiPackageContent}"/>
+                        <ListBox ItemsSource="{Binding SelectedPachetContinut}"/>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+        <TextBlock Grid.Row="2"
                    Margin="0,12,0,0"
                    Text="{Binding Status}"/>
     </Grid>

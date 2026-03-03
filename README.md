@@ -1,28 +1,30 @@
-#  Product & Service Management Console App
+﻿# Product Service Management System
 
-##  About
+## Overview
+A C# application for managing products, services, and bundled packages. The solution includes a reusable Core library, a console app, and a WPF desktop UI built with MVVM. Data can be loaded from XML or created manually in the UI, with inline editing and CRUD operations.
 
-This is a C# console application for managing products, services, and bundled packages.  
-It supports flexible data input (console or XML), LINQ-based queries, sorting by price, and a modular filtering system built using interfaces.  
-The project was developed as part of a university assignment to explore OOP concepts, inheritance, and extensibility in .NET.
+## Projects
+- `ProductService.Core` - Domain models and managers (products, services, packages)
+- `Proiect` - Console app for CLI workflows
+- `ProductServiceWpf` - WPF desktop UI (MVVM)
 
----
+## Key Features
+- Create and manage products and services
+- Create packages and add products/services to them
+- Inline editing directly in DataGrids
+- CRUD operations for products, services, and packages
+- XML import for initial data
+- MVVM separation with commands and validation
 
-##  Features
+## Architecture Highlights
+- Core domain models in a separate library
+- Managers for products, services, and packages
+- MVVM UI layer with view models, commands, and validation
+- Data access abstracted through a service interface
 
-- Add and display products and services
-- Group items into custom packages
-- Read data from the console or from XML files
-- Perform LINQ queries (by category, by price, grouping)
-- Filter packages using customizable filter criteria via interfaces
-- Easily extend the app with new filter types
+## Running the App
+- Console: set `Proiect` as Startup Project and run
+- WPF UI: set `ProductServiceWpf` as Startup Project and run
 
----
-
-
-## 🖼️ Screenshots
-
-<img src="https://github.com/user-attachments/assets/5a23efbc-dcf6-4cdc-985d-48de6e9d5a2e" style="width: 40%;">  
-<img src="https://github.com/user-attachments/assets/c8e45cca-2158-48f4-aaa5-db081a70cc7c" style="width: 40%;">  
-
----
+## Data
+- Sample XML is in `Data/p_s.xml` and is copied to output on build

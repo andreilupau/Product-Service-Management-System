@@ -2,9 +2,8 @@ namespace Lab2;
 
 public class Pachet : ProdusServiciuAbstract, IComparable<Pachet>//ex4L6 si codul de jos compareto 
 {
-    //TODO: Poti sterge mostenirea cu ProdusServiciuAbstract? dar in clasa PachetManager.cs?
-    public Pachet(uint id, string nume, string codIntern, uint pret, string? categorie)
-        : base(id, nume, codIntern, pret, categorie)
+    public Pachet(uint id, string nume, string codIntern, string? categorie)
+        : base(id, nume, codIntern, 0, categorie)
     {
     }
     
@@ -38,7 +37,6 @@ public class Pachet : ProdusServiciuAbstract, IComparable<Pachet>//ex4L6 si codu
     }
     
     
-    //ex4
     public IReadOnlyList<IPackageable> GetElements()
     {
         return elem_pachet.AsReadOnly();

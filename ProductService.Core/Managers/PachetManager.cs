@@ -15,6 +15,16 @@ public class PachetManager : ProduseServiciiManagerAbstract
         if (pachet == null) throw new ArgumentNullException(nameof(pachet));
         Pachet100.Add(pachet);
     }
+
+    public void ClearPachete()
+    {
+        Pachet100.Clear();
+    }
+
+    public bool RemovePachet(Pachet pachet)
+    {
+        return Pachet100.Remove(pachet);
+    }
     
     //Userul creaza pachetul si continutul din el dupa plac
     public Pachet ReadPachet()
@@ -38,16 +48,13 @@ public class PachetManager : ProduseServiciiManagerAbstract
         if (string.IsNullOrWhiteSpace(categorie))
             categorie = "Pachet";
 
-        // pachetul poate porni cu pret 0; se va recalcula din componente
-        Pachet pachet = new Pachet(nextPachetId, nume, codIntern, 0, categorie);
-        
-        //TODO: sa-mi arate pachetul creat de mine aici in consola, si la toate nu doar aici
-        //TODO: optune sa arata pachetele sa afiseze pachetele curente
+        // pachetul pornește cu pret 0; se va recalcula din componente
+        Pachet pachet = new Pachet(nextPachetId, nume, codIntern, categorie);
 
-        // Acum userul alege ce adauga (optional)
+        
+        // Acum userul alege ce adauga
         var produseManager = new ProduseManager();
         var serviciiManager = new ServiciiManager();
-
         while (true)
         {
             Console.WriteLine("\nAdaugare in pachet:");
@@ -185,7 +192,7 @@ public class PachetManager : ProduseServiciiManagerAbstract
     
     public void WriteSortedPachete()
     {
-        Console.WriteLine("\nLista pachete (din Pachet100), dar sortate după pret:");
+        Console.WriteLine("\nAfisare lista pachete existente:"); //din Pachet100
 
         if (Pachet100.Count == 0)
         {
@@ -201,4 +208,42 @@ public class PachetManager : ProduseServiciiManagerAbstract
             Console.WriteLine(pachet.Descriere());
         }
     }
+
+    public void WritePacheteContinut()
+    {
+        Console.WriteLine("\nAfisarea continutului din pachetele existente:"); //din Pachet100
+
+        if (Pachet100.Count == 0)
+        {
+            Console.WriteLine("Nu exista pachete de afisat!");
+            return;
+        }
+
+        foreach (var pachet in Pachet100)
+        {
+            Console.WriteLine(pachet.Descriere());
+
+            var elements = pachet.GetElements();
+            if (elements.Count == 0)
+            {
+                Console.WriteLine("  (pachet gol)");
+                continue;
+            }
+
+            foreach (var element in elements)
+            {
+                if (element is ProdusServiciuAbstract psa)
+                {
+                    Console.WriteLine($"  - {psa.Descriere()}");
+                }
+                else
+                {
+                    Console.WriteLine($"  - Element (Pret: {element.Pret})");
+                }
+            }
+        }
+    }
+    
+    
+    
 }
