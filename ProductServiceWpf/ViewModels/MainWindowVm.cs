@@ -368,6 +368,11 @@ public sealed class MainWindowVm : INotifyPropertyChanged, INotifyDataErrorInfo
             SelectedPachet = Pachete.FirstOrDefault(p => p.Id == selectedId.Value);
         else
             UpdateSelectedPachetContinut();
+
+        // SelectedPachet can be the same reference, so setter might not run.
+        // Ensure UI content list reflects newly added package elements.
+        if (SelectedPachet != null)
+            UpdateSelectedPachetContinut();
     }
 
     private void UpdateSelectedPachetContinut()

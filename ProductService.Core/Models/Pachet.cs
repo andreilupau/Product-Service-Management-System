@@ -54,9 +54,16 @@ public class Pachet : ProdusServiciuAbstract, IComparable<Pachet>//ex4L6 si codu
             }
             return true; // Nu există produs, se poate adăuga
         }
-        else if (item is Serviciu)
+        else if (item is Serviciu serviciuNou)
         {
-            return true; // Serviciile sunt nelimitate
+            foreach (var element in elem_pachet)
+            {
+                if (element is Serviciu serviciuExistent && serviciuExistent.Id == serviciuNou.Id)
+                {
+                    return false; // Acelasi serviciu exista deja in pachet
+                }
+            }
+            return true;
         }
         return false; // Alte tipuri nu sunt permise
     }
